@@ -1,4 +1,4 @@
-%% Start of file `awesome-cv.cls'.
+% Start of file `awesome-cv.cls'.
 % Awesome CV Class File
 %
 % This class has been downloaded from:
@@ -161,7 +161,7 @@
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
-\newfontfamily\FA[Path=\@fontdir]{FontAwesome}
+\setfontfamily\FA[Path=\@fontdir]{FontAwesome}
 % Set font for header (default is Roboto)
 \newfontfamily\headerfont[
   Path=\@fontdir,
