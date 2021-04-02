@@ -1,12 +1,11 @@
-.PHONY: clean
-
-CC = xelatex
-EXAMPLES_DIR = examples
-CV_DIR = examples/cv
-CV_SRCS = $(shell find $(CV_DIR) -name '*.tex')
-
-pdf: $(EXAMPLES_DIR)/cv.tex $(CV_SRCS)
-	$(CC) -output-directory=$(EXAMPLES_DIR) $<
-
+CV_TEX=cv
+CV_DIR=cv
+CV_PDF_NAME=example-cv
+VIEWER=code
+cv-pdf:
+	rubber --into ${CV_DIR} -o xelatex -d ${CV_DIR}/${CV_TEX}
+	mv ${CV_DIR}/${CV_TEX}.pdf ${CV_PDF_NAME}.pdf
+	${VIEWER} ${CV_PDF_NAME}.pdf
+	make clean
 clean:
-	rm -rf $(EXAMPLES_DIR)/*.pdf
+	rubber --into ${CV_DIR} --clean ${CV_DIR}/${CV_TEX}

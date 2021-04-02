@@ -46,6 +46,7 @@
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
+\newcommand{\sectionsDirPath}{sections}
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
@@ -95,14 +96,14 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/education.tex}
-\input{cv/skills.tex}
-\input{cv/experience.tex}
-\input{cv/extracurricular.tex}
-\input{cv/honors.tex}
-\input{cv/presentation.tex}
-\input{cv/writing.tex}
-\input{cv/committees.tex}
+\input{\sectionsDirPath/education.tex}
+\input{\sectionsDirPath/skills.tex}
+\input{\sectionsDirPath/experience.tex}
+\input{\sectionsDirPath/extracurricular.tex}
+\input{\sectionsDirPath/honors.tex}
+\input{\sectionsDirPath/presentation.tex}
+\input{\sectionsDirPath/writing.tex}
+\input{\sectionsDirPath/committees.tex}
 
 
 %-------------------------------------------------------------------------------
