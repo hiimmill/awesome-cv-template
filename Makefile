@@ -9,3 +9,6 @@ cv-pdf:
 	make clean
 clean:
 	rubber --into ${CV_DIR} --clean ${CV_DIR}/${CV_TEX}
+cv-pngs:
+	pdftoppm -png -f 1 -l 2 ${CV_PDF_NAME}.pdf ${CV_PDF_NAME}
+
